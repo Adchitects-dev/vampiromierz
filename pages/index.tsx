@@ -10,23 +10,23 @@ import styles from "../styles/Home.module.css"
 
 const Home: NextPage = () => {
   return (
-    <div style={{marginTop: 24}}>
+    <div>
       <Head>
         <title>Brelly - homepage</title>
       </Head>
 
-      <main>
+      <main style={{ padding: "24px 0 128px 0" }}>
         <MenuIndex />
         {/* <div style={{ margin: "0 172px 0 172px" }}> */}
-          <HeroIndex />
-          <TestimonialIndex />
-          <NewsletterIndex />
+        <HeroIndex />
+        <TestimonialIndex />
+        <NewsletterIndex />
         {/* </div> */}
       </main>
       <style global jsx>{`
         * {
           font-family: Inter;
-          font-weight: 500;
+          font-weight: 400;
         }
       `}</style>
     </div>

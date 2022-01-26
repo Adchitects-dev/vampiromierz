@@ -13,19 +13,9 @@ const HeroIndex = () => {
           height: 384,
         }}
       >
-        <div
-          style={{
-            fontWeight: 500,
-            fontSize: 48,
-            marginRight: 24,
-            width: 516,
-            height: 192,
-          }}
-        >
-          <p>In oculis quidem</p>
-          <p>rerum facilis est et</p>
-          <p>aperta.</p>
-        </div>
+        <p className="in-oculis-quidem-rer">
+          In oculis quidem rerum facilis est et aperta.
+        </p>
 
         <Image
           alt="hero_image"
@@ -35,6 +25,19 @@ const HeroIndex = () => {
           layout="fixed"
         />
       </div>
+
+      <style jsx>{`
+        .in-oculis-quidem-rer {
+          color: #231e1e;
+          font-family: Inter;
+          font-size: 48px;
+          line-height: 64px;
+          width: 516px;
+          text-align: left;
+
+          font-weight: 500;
+        }
+      `}</style>
     </ContentLayout>
   )
 }

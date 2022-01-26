@@ -4,7 +4,7 @@ import SubmitContainer from "./SubmitContainer"
 const NewsletterIndex = () => {
   return (
     <ContentLayout>
-      <div style={{ width: 624, height: 168 }}>
+      <div style={{ width: 624 }}>
         <p className="sign-up-for-newslett" style={{ marginBottom: 64 }}>
           Sign up for Newsletter
         </p>
@@ -23,6 +23,8 @@ const NewsletterIndex = () => {
             line-height: 56px;
             width: 624px;
             text-align: center;
+
+            font-weight: 500;
           }
 
           .thank-you-for-signin {

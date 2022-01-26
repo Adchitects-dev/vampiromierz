@@ -4,12 +4,12 @@ const TestimonialIndex = () => {
   return (
     <div
       className="background"
-      style={{ display: "flex", alignItems: "center" }}
+      style={{ display: "flex", alignItems: "center", marginBottom: 128 }}
     >
       <ContentLayout>
         <div
           style={{
-            margin: "0 172",
+            margin: "0 172px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-around",
