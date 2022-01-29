@@ -18,6 +18,7 @@ const TestimonialIndex = ({ text, author }: Testimorial) => {
               width={48}
               height={40}
               layout="fixed"
+              alt="quotation-mark"
             />
           </p>
           <p className="torquatos-nostros-q">{text}</p>

@@ -1,11 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next"
-import Error from "next/error"
-import { createContext, FC } from "react"
-import {
-  getHeader,
-  getPage,
-  getPaths,
-} from "../components/functions/getDataSSG"
+import { createContext } from "react"
+import { getPage, getPaths } from "../components/functions/getDataSSG"
 import Layout from "../components/Layout"
 import PageComponent from "../components/Pages/PageComponent"
 import Custom404 from "./404"

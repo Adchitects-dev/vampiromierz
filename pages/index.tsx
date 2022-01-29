@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next"
-import { getHeader, getPage, getPaths } from "../components/functions/getDataSSG"
+import { getPage, getPaths } from "../components/functions/getDataSSG"
 
 // this is a workaround for dynamic paths
 import Index from "./[url]"

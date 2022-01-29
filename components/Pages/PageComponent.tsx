@@ -31,7 +31,7 @@ const PageComponent = ({ page }: Page) => {
         <title>Brelly - {subtitle}</title>
       </Head>
       {page?.sections?.map((section) => (
-        <ProperComponent {...{ section }} />
+        <ProperComponent key={section.type} {...{ section }} />
       ))}
     </>
   )
