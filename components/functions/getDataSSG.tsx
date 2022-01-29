@@ -52,35 +52,35 @@ export async function getPage(params) {
 
   const api = process.env.API
 
-  // const res_page = await fetch(
-  //   `${api}/page/:${params.id}`,
-  //   {
-  //     headers,
-  //     method: "GET",
-  //   }
-  // )
+  const res_page = await fetch(
+    `${api}/page/:${params.id}`,
+    {
+      headers,
+      method: "GET",
+    }
+  )
 
-  // const page = await res_page.json()
+  const page = await res_page.json()
 
-  const page = {
-    url: "/",
-    id: "DxgKRMPz3u",
-    sections: [
-      {
-        type: "hero",
-        text: "lorem ipsum",
-        img: "https://pl.wikipedia.org/wiki/JavaScript#/media/Plik:Unofficial_JavaScript_logo_2.svg",
-      },
-      {
-        type: "testimonial",
-        text: "lorem ipsum",
-        author: "John Doe",
-      },
-      {
-        type: "newsletter",
-      },
-    ],
-  }
+  // const page = {
+  //   url: "/",
+  //   id: "DxgKRMPz3u",
+  //   sections: [
+  //     {
+  //       type: "hero",
+  //       text: "lorem ipsum",
+  //       img: "https://pl.wikipedia.org/wiki/JavaScript#/media/Plik:Unofficial_JavaScript_logo_2.svg",
+  //     },
+  //     {
+  //       type: "testimonial",
+  //       text: "lorem ipsum",
+  //       author: "John Doe",
+  //     },
+  //     {
+  //       type: "newsletter",
+  //     },
+  //   ],
+  // }
 
   if (!page || page.message)
     return {

@@ -11,10 +11,6 @@ const NewsletterIndex = () => {
 
         <SubmitContainer />
 
-        <p className="thank-you-for-signin" style={{ marginTop: 48 }}>
-          Thank you for signing up for the Breally newsletter.
-        </p>
-
         <style jsx>{`
           .sign-up-for-newslett {
             color: #231e1e;
@@ -24,15 +20,6 @@ const NewsletterIndex = () => {
             width: 624px;
             text-align: center;
             font-weight: 500;
-          }
-
-          .thank-you-for-signin {
-            color: #5edc4b;
-            font-family: Inter;
-            font-size: 14px;
-            line-height: 22px;
-            width: 624px;
-            text-align: center;
           }
         `}</style>
       </div>
