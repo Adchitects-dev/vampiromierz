@@ -1,44 +1,47 @@
+import Image from "next/image"
 import ContentLayout from "../../ContentLayout"
 
-const TestimonialIndex = () => {
+type Testimorial = {
+  text: string
+  author: string
+}
+
+const TestimonialIndex = ({ text, author }: Testimorial) => {
   return (
-    <div
-      className="background"
-      style={{ display: "flex", alignItems: "center", marginBottom: 128 }}
-    >
+    <div className="background">
       <ContentLayout>
-        <div
-          style={{
-            margin: "0 172px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-around",
-          }}
-        >
-          <p className="shape">&quot;</p>
-          <p className="torquatos-nostros-q" style={{ color: "#F1F0F0" }}>
-            Torquatos nostros? quos dolores eos, qui studiose antiqua
-            persequeris, claris et quasi naturalem. In quo enim inter mediocrem
-            animadversionem atque insitam in malis dolor, non numquam. At vero
-            eos et dolore suo sanciret.
+        <div className="content-box">
+          <p className="shape">
+            <Image
+              className="shape"
+              src="/quotation-mark.svg"
+              width={48}
+              height={40}
+              layout="fixed"
+            />
           </p>
-          <p className="john-doe-street-art" style={{ color: "#989898" }}>
-            John Doe, Street Artist
-          </p>
+          <p className="torquatos-nostros-q">{text}</p>
+          <p className="john-doe-street-art">{author}</p>
         </div>
       </ContentLayout>
       <style jsx>{`
+        .content-box {
+          padding: 128px 0;
+          margin: 0 172px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-around;
+        }
         .background {
           background-color: #231e1e;
-          height: 613px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: 152px;
         }
 
         .shape {
-          // background-color: #dac2f2;
           color: #dac2f2;
-          border: 1px solid white;
-          width: 48px;
-          height: 40px;
         }
 
         .torquatos-nostros-q {

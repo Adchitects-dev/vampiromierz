@@ -1,36 +1,26 @@
-import type { NextPage } from "next"
-import Head from "next/head"
+import type { GetStaticProps } from "next"
+import { getHeader, getPage, getPaths } from "../components/functions/getDataSSG"
 
-import MenuIndex from "../components/Home/menu"
-import HeroIndex from "../components/Home/hero"
-import TestimonialIndex from "../components/Home/testimonial"
-import NewsletterIndex from "../components/Home/newsletter"
+// this is a workaround for dynamic paths
+import Index from "./[url]"
 
-import styles from "../styles/Home.module.css"
+// static generate page to get all language options only with one fetch by server
+export const getStaticProps: GetStaticProps = async () => {
+  const username = process.env.LOGIN_USER
+  const password = process.env.LOGIN_PASS
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Brelly - homepage</title>
-      </Head>
+  // data for newsletter
+  const pages = await getPaths()
 
-      <main style={{ padding: "24px 0 128px 0" }}>
-        <MenuIndex />
-        {/* <div style={{ margin: "0 172px 0 172px" }}> */}
-        <HeroIndex />
-        <TestimonialIndex />
-        <NewsletterIndex />
-        {/* </div> */}
-      </main>
-      <style global jsx>{`
-        * {
-          font-family: Inter;
-          font-weight: 400;
-        }
-      `}</style>
-    </div>
-  )
+  // we need to depack pages and get static index page
+  const indexPage = pages.filter(({ params: { url } }) => url === "/")[0].params
+
+  // data for page
+  const page = await getPage(indexPage)
+
+  return {
+    props: { page, pages, username, password },
+  }
 }
 
-export default Home
+export default Index

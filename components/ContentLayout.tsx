@@ -1,4 +1,9 @@
-const ContentLayout: React.FC = ({ children }) => {
+type Layout = {
+  children:  React.ReactNode
+  margin?: number
+}
+
+const ContentLayout = ({ children, margin = 0 }: Layout) => {
   return (
     <div className="container">
       {children}
@@ -6,7 +11,8 @@ const ContentLayout: React.FC = ({ children }) => {
         .container {
           display: flex;
           justify-content: center;
-          margin: 0 172px;
+          margin: ${margin}px 0 0 0;
+          width: 1400px;
         }
       `}</style>
     </div>

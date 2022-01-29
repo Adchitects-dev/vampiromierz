@@ -3,8 +3,8 @@ import SubmitContainer from "./SubmitContainer"
 
 const NewsletterIndex = () => {
   return (
-    <ContentLayout>
-      <div style={{ width: 624 }}>
+    <ContentLayout margin={128}>
+      <div>
         <p className="sign-up-for-newslett" style={{ marginBottom: 64 }}>
           Sign up for Newsletter
         </p>
@@ -23,7 +23,6 @@ const NewsletterIndex = () => {
             line-height: 56px;
             width: 624px;
             text-align: center;
-
             font-weight: 500;
           }
 
