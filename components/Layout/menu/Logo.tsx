@@ -10,7 +10,8 @@ const Logo = ({ url, id }: Logo) => {
   return (
     <Link href="/">
       <a style={{ marginRight: 97 }}>
-        <Image width={89} height={32} alt="homepage" src="/logo.svg" />
+        {/* Was next Image before, but it cant be used in next build export */}
+        <img width={89} height={32} alt="homepage" src="/logo.svg" />
       </a>
     </Link>
   )

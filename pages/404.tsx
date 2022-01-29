@@ -10,9 +10,9 @@ type Error = {
 
 export default function Custom404({ pages }: Error) {
   return (
-    <Layout {...{ pages }}>
+    // <Layout {...{ pages }}>
       <h1>404 - Page Not Found</h1>
-    </Layout>
+    // </Layout>
   )
 }
 

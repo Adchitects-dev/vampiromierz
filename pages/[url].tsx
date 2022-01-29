@@ -9,7 +9,7 @@ type Props = {
   page: {
     url: string
     id: string
-    notFound: Boolean // when nothing returned
+    notFound?: Boolean // when nothing returned
     sections: Array<{ [x: string]: any }>
   }
   pages: Array<{
@@ -25,7 +25,7 @@ export const HeadersContext = createContext(null)
 const Page: NextPage = (props: Props) => {
   const { page, pages, username, password } = props
 
-  if (page.notFound) return <Custom404 {...{ pages }} />
+  if (!page || page?.notFound) return <Custom404 {...{ pages }} />
 
   return (
     <div>
@@ -55,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: true }
+  return { paths, fallback: false }
 }
 
 // static generate page to get all language options only with one fetch by server

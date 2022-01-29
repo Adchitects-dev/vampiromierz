@@ -12,12 +12,13 @@ const TestimonialIndex = ({ text, author }: Testimorial) => {
       <ContentLayout>
         <div className="content-box">
           <p className="shape">
-            <Image
+            {/* Was next Image before, but it cant be used in next build export */}
+            <img
               className="shape"
               src="/quotation-mark.svg"
               width={48}
               height={40}
-              layout="fixed"
+              // layout="fixed"
               alt="quotation-mark"
             />
           </p>

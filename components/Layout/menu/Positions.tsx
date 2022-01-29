@@ -29,6 +29,7 @@ const SinglePosition = ({ params }) => {
           line-height: 24px;
           text-align: left;
           margin-right: 48px;
+          text-decoration: none;
         }
       `}</style>
     </>
@@ -41,8 +42,6 @@ type Positions = {
   }>
 }
 const Positions = ({ pages }: Positions) => {
-  console.log(pages)
-
   return (
     <>
       {pages.map(({ params }) => (
